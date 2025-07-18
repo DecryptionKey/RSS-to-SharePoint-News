@@ -1,9 +1,4 @@
-
-# :
-
-----------
-
-### 🛡️RSS to SharePoint News Automation
+# 🛡️RSS to SharePoint News🛡️
 
 This project provides a Power Automate flow that automatically retrieves updates from RSS feeds and posts them as SharePoint News items. It enables seamless integration between external content sources and internal SharePoint communication systems.
 
@@ -16,7 +11,7 @@ This solution is ideal for organizations that want to:
 - Monitor industry updates or vulnerability advisories
 - Keep internal teams informed without manual posting
 
-## Features
+## 🔧 Features
 
 - Scheduled or event-based RSS polling
 - Supports JSON and HTML-based RSS formats
@@ -67,5 +62,5 @@ You can extend the flow to:
 This project is open-source and provided under the MIT License.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg4MDA3NzExMF19
+eyJoaXN0b3J5IjpbMTkyMzgxNDU1OV19
 -->
