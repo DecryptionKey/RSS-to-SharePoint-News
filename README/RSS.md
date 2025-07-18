@@ -26,7 +26,7 @@ In a cybersecurity context, this flow can pull data from feeds like NVD (Nationa
 
 ## ✅Testing
 
-The flow was tested in a development environment over two days. It successfully created SharePoint News posts for every new RSS item received, confirming stability and accuracy.
+The flow was tested in a development environment over multiple days. It successfully created SharePoint News posts for every new RSS item received, confirming stability and accuracy.
 
 ## 🚨 Requirements
 
@@ -43,7 +43,7 @@ The flow was tested in a development environment over two days. It successfully 
 4. Test the flow using a feed with frequent updates.
 5. Enable the flow to run automatically on a schedule or trigger.
 
-## Customization
+## 🔄 Customization
 
 You can extend the flow to:
 - Filter RSS items by keyword or category
@@ -62,5 +62,5 @@ You can extend the flow to:
 This project is open-source and provided under the MIT License.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA0NjQ3MTY3Ml19
+eyJoaXN0b3J5IjpbLTEwNjc5OTM1M119
 -->
