@@ -51,12 +51,12 @@ You can extend the flow to:
 - Send Teams notifications for high-priority items
 - Format HTML content for rich SharePoint display
 
-## Limitations
+## ⚠️ Limitations
 
 - Complex HTML formatting is stripped in plain text mode
 - Rate-limited by RSS provider and SharePoint API quotas
 - Requires proper SharePoint permissions for API use
 
-## License
+## ⚖️ License
 
 This project is open-source and provided under the MIT License.
