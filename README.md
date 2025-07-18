@@ -12,7 +12,7 @@ This solution is ideal for organizations that want to:
 - Monitor industry updates or vulnerability advisories
 - Keep internal teams informed without manual posting
 
-## 🔧 Features
+## Features
 
 - Scheduled or event-based RSS polling
 - Supports JSON and HTML-based RSS formats
@@ -25,18 +25,18 @@ This solution is ideal for organizations that want to:
 
 In a cybersecurity context, this flow can pull data from feeds like NVD (National Vulnerability Database) or CVE Details and post critical vulnerability disclosures to a SharePoint Security News hub.
 
-## ✅Testing
+## Testing
 
 The flow was tested in a development environment over multiple days. It successfully created SharePoint News posts for every new RSS item received, confirming stability and accuracy.
 
-## 🚨 Requirements
+##  Requirements
 
 - Microsoft Power Automate license
 - SharePoint site with News Posts enabled
 - RSS feed URL (e.g., blog, news, security advisory)
 - Site and list permissions for SharePoint HTTP connector
 
-## 📁 Setup Instructions
+## Setup Instructions
 
 1. Import the `.zip` flow package into Power Automate.
 2. Edit the flow to set your RSS feed URL.
@@ -44,7 +44,7 @@ The flow was tested in a development environment over multiple days. It successf
 4. Test the flow using a feed with frequent updates.
 5. Enable the flow to run automatically on a schedule or trigger.
 
-## 🔄 Customization
+## Customization
 
 You can extend the flow to:
 - Filter RSS items by keyword or category
