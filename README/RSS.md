@@ -20,22 +20,22 @@ This solution is ideal for organizations that want to:
 - Auto-creates SharePoint News items with title, summary, and link
 - Lightweight and configurable
 
-## 🧩 Example Use Case
+## 🔐Example Use Case
 
 In a cybersecurity context, this flow can pull data from feeds like NVD (National Vulnerability Database) or CVE Details and post critical vulnerability disclosures to a SharePoint Security News hub.
 
-## Testing
+## ✅Testing
 
 The flow was tested in a development environment over two days. It successfully created SharePoint News posts for every new RSS item received, confirming stability and accuracy.
 
-## 📁 Requirements
+## 🚨 Requirements
 
 - Microsoft Power Automate license
 - SharePoint site with News Posts enabled
 - RSS feed URL (e.g., blog, news, security advisory)
 - Site and list permissions for SharePoint HTTP connector
 
-## Setup Instructions
+## 📁 Setup Instructions
 
 1. Import the `.zip` flow package into Power Automate.
 2. Edit the flow to set your RSS feed URL.
@@ -62,5 +62,5 @@ You can extend the flow to:
 This project is open-source and provided under the MIT License.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTQ0NDY3ODQwXX0=
+eyJoaXN0b3J5IjpbMjA0NjQ3MTY3Ml19
 -->
