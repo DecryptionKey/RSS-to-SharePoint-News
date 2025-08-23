@@ -1,4 +1,4 @@
-# 🛡️RSS to SharePoint News🛡️
+# RSS to SharePoint News
 <img width="1168" height="285" alt="Screenshot 2025-08-23 at 7 25 07 PM" src="https://github.com/user-attachments/assets/8e9a185d-5492-4f3d-9ec5-7567a24523a0" />
 
 This project provides a Power Automate flow that automatically retrieves updates from RSS feeds and posts them as SharePoint News items. It enables seamless integration between external content sources and internal SharePoint communication systems.
