@@ -1,0 +1,67 @@
+{
+  "triggers": {
+    "When_a_feed_item_is_published": {
+      "recurrence": {
+        "frequency": "Minute",
+        "interval": 1
+      },
+      "splitOn": "@triggerOutputs()?['body/value']",
+      "type": "OpenApiConnection",
+      "inputs": {
+        "parameters": {
+          "feedUrl": "https://cvefeed.io/rssfeed/latest.xml",
+          "sinceProperty": "PublishDate"
+        },
+        "host": {
+          "apiId": "/providers/Microsoft.PowerApps/apis/shared_rss",
+          "connectionName": "shared_rss",
+          "operationId": "OnNewFeed"
+        },
+        "authentication": "@parameters('$authentication')"
+      }
+    }
+  },
+  "actions": {
+    "Html_to_text": {
+      "runAfter": {},
+      "type": "OpenApiConnection",
+      "inputs": {
+        "parameters": {
+          "Content": "<p class=\"editor-paragraph\">@{triggerOutputs()?['body/summary']}</p>"
+        },
+        "host": {
+          "apiId": "/providers/Microsoft.PowerApps/apis/shared_conversionservice",
+          "connectionName": "shared_conversionservice",
+          "operationId": "HtmlToText"
+        },
+        "authentication": "@parameters('$authentication')"
+      }
+    },
+    "Send_an_HTTP_request_to_SharePoint": {
+      "runAfter": {
+        "Html_to_text": [
+          "Succeeded"
+        ]
+      },
+      "type": "OpenApiConnection",
+      "inputs": {
+        "parameters": {
+          "dataset": "https://contoso.sharepoint.com/sites/YourNewsSite",
+          "parameters/method": "POST",
+          "parameters/uri": "/_api/sitepages/pages/reposts",
+          "parameters/headers": {
+            "content-type": "application/json; odata=verbose; charset=utf-8",
+            "accept": "application/json"
+          },
+          "parameters/body": "{\"BannerImageUrl\":\"https://pbs.twimg.com/profile_images/1886888720898412544/40A9jtVN_400x400.jpg\",\"Description\":\"@{body('Html_to_text')}\",\"IsBannerImageUrlExternal\":true,\"OriginalSourceUrl\":\"@{triggerOutputs()?['body/primaryLink']}\",\"ShouldSaveAsDraft\":false,\"Title\":\"@{triggerOutputs()?['body/title']}\",\"__metadata\":{\"type\":\"SP.Publishing.RepostPage\"}}"
+        },
+        "host": {
+          "apiId": "/providers/Microsoft.PowerApps/apis/shared_sharepointonline",
+          "connectionName": "shared_sharepointonline",
+          "operationId": "HttpRequest"
+        },
+        "authentication": "@parameters('$authentication')"
+      }
+    }
+  }
+}
